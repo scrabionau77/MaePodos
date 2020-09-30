@@ -1,0 +1,51 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-androidx": {
+      "PACKAGE_NAME": "com.maestrale.maepodos"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.maestrale.maepodos"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "com.maestrale.maepodos"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.maestrale.maepodos"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.maestrale.maepodos"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.maestrale.maepodos"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.maestrale.maepodos"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.maestrale.maepodos"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.maestrale.maepodos"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.maestrale.maepodos"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.maestrale.maepodos"
+    },
+    "cordova-plugin-wkwebview-engine": {
+      "PACKAGE_NAME": "com.maestrale.maepodos"
+    },
+    "cordova-plugin-x-toast": {
+      "PACKAGE_NAME": "com.maestrale.maepodos"
+    }
+  },
+  "dependent_plugins": {}
+}

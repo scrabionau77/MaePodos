@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!--
+    MaePodos - powereb by Daniele Pellerucci for Maestrale Information Technology
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://staticxx.facebook.com http://www.maestrale.it https://maesafetyapi-dev.maestrale.it https://maesafety-dev.maestrale.it https://st-hw.teamsystemhr.com https://hw.teamsystemhr.com https://app-healthywks-prod.azurewebsites.net https://www.facebook.com data: gap://ready https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' http://*.maestrale.it https://maesafetyapi-dev.maestrale.it https://maesafety-dev.maestrale.it https://st-hw.teamsystemhr.com https://hw.teamsystemhr.com https://app-healthywks-prod.azurewebsites.net http://*.googleapis.com https://*.googleapis.com http://*.gstatic.com https://*.gstatic.com https://ssl.gstatic.com https://example.com 'unsafe-inline'; script-src 'self' http://*.maestrale.it https://maesafetyapi-dev.maestrale.it https://maesafety-dev.maestrale.it https://st-hw.teamsystemhr.com https://hw.teamsystemhr.com https://app-healthywks-prod.azurewebsites.net http://*.googleapis.com https://*.googleapis.com http://*.gstatic.com https://*.gstatic.com https://example.com https://code.google.com  http://connect.facebook.net https://www.google-analytics.com 'unsafe-inline' 'unsafe-eval'; media-src *; img-src 'self' https://www.facebook.com http://www.maestrale.it https://maesafetyapi-dev.maestrale.it https://maesafety-dev.maestrale.it https://st-hw.teamsystemhr.com https://hw.teamsystemhr.com https://app-healthywks-prod.azurewebsites.net https://scontent.xx.fbcdn.net data:;">
+
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+
+        <!-- FOGLI DI STILE -->
+        <link rel="stylesheet" href="css/jquery.mobile.theme.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.min.css" />
+
+        <link rel="stylesheet" href="jquery/jquery-ui.min.css" />
+        <link rel="stylesheet" href="jquery/jquery-ui.structure.min.css" />
+        <link rel="stylesheet" href="jquery/jquery-ui.theme.min.css" />
+        <link rel="stylesheet" href="jquery/jquery-ui.datepicker.css" />
+
+        <!--<link rel="stylesheet" href="css/owl_carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl_carousel/owl.theme.default.css">-->
+        <link rel="stylesheet" href="css/nightly.css" />
+        <!-- NIGHTLY style -->
+        <!--<link rel="stylesheet" href="css/smartpaginator.css" />-->
+        <link rel="stylesheet" href="css/jqm-calendar/jw-jqm-cal.css" />
+        <link rel="stylesheet" href="css/jqm-calendar/jw-jqm-cal.ios7.css" />
+        <!--<link rel="stylesheet" href="css/datebox/jqm-datebox.min.css" />-->
+
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+
+        <!-- Javascript -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="jquery/jquery.min.js"></script>
+        <script src="jquery/jquery-ui.js"></script>
+	      <script src="jquery/jquery.mobile-1.4.5.js"></script>
+	      <script src="js/nightly.js"></script><!-- NIGHTLY JS -->
+        <!--<script src="js/owl.carousel.min.js"></script>-->
+        <script src="js/jqm-calendar/jw-jqm-cal.js"></script>
+
+
+        <script src="jquery/jquery.mtz.monthpicker.js"></script>
+
+        <script>
+            $(document).bind('mobileinit',function(){
+                $.mobile.changePage.defaults.changeHash = false;
+                $.mobile.hashListeningEnabled = false;
+                $.mobile.pushStateEnabled = false;
+            });
+        </script>
+
+
+        <title>MAE PODOS</title>
+    </head>
+
+
+
+
+    <body onload="onLoad()">
+
+        <!-- HOME -->
+        <div id="home" data-role="page" data-theme='e'>
+            <div class="sidebar_zone"></div>
+            <!--<div class="topbar_zone"></div>-->
+            <!-- header -->
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='e' style="background: #003399; background: -moz-linear-gradient(top, #0072d3 1%, #003399 100%); background: -webkit-linear-gradient(top, #0072d3 1%, #003399 100%); background: linear-gradient(to bottom, #0072d3 1%, #003399 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0072d3', endColorstr='',GradientType=0 );">
+                <h1 class="header-title">MAE PODOS</h1>
+            </div>
+
+            <!-- contenuto - home -->
+            <div data-role="content">
+
+            </div>
+            <!--<div class="footer_zone"></div>-->
+            <div class="loader"></div> <!-- animazione al caricamento -->
+        </div>
+        <!-- fine pagina home -->
+
+
+        <!-- UNLOGGED -->
+        <div id="unlogged" data-role="page" data-theme='e'>
+            <div class="sidebar_zone"></div>
+            <!--<div class="topbar_zone"></div>-->
+            <!-- header -->
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='e'>
+                <h1 class="header-title">MAE PODOS</h1>
+            </div>
+
+            <!-- contenuto - home -->
+            <div data-role="content">
+                <p>Effettua il login</p>
+                <ul data-role="listview">
+                    <li data-role="fieldcontain" style="border: none;">
+                        <label>Email:</label>
+                        <input id="login_mail" data-corners="false" type="email" value="" data-clear-btn="true" placeholder="">
+                    </li>
+                    <li data-role="fieldcontain" style="border: none;">
+                        <label>Password:</label>
+                        <div class="pwd_div">
+                            <input id="login_pwd" class="password" data-corners="false" type="password" value="" data-clear-btn="false" placeholder="">
+                            <div class="pwd_show" data-id="login_pwd"><i class="fa fa-eye"></i></div>
+                        </div>
+                    </li>
+                    <li data-role="fieldcontain" style="border: none;">
+                        <button id="login_go" class="logInOut ui-btn ui-btn-inline" style="font-weight: normal;">Log-in</button>
+                    </li>
+                </ul>
+                <br />
+
+                <p><small class="version" style="color: #bbbbbb; font-size: 10px;"></small></p>
+                
+
+            </div>
+            <!--<div class="footer_zone"></div>-->
+            <div class="loader"></div> <!-- animazione al caricamento -->
+        </div>
+        <!-- fine pagina unlogged -->
+
+
+        <!-- LOGGED -->
+        <div id="logged" data-role="page" data-theme='e'>
+            <div class="sidebar_zone"></div>
+            <!--<div class="topbar_zone"></div>-->
+            <!-- header -->
+            <div data-role="header" class="big" data-position="fixed" data-tap-toggle="false" data-theme='e'>
+                <a class='toggle_sidebar' href="#" data-role="none"><i class="fa fa-reorder"></i></a>
+                <p class="home_head_p">Benvenuto</p>
+
+                <h1 class="rif_user_full_name header-title">NOME COGNOME</h1>
+                <p class="rif_nome_azienda home_azienda">AZIENDA</p>
+                <p class="home_data">venerdì, 8 maggio 2020</p>
+                <!--<a class="profile_img_head ui-btn-right" data-role="none"></a>-->
+            </div>
+
+            <!-- contenuto - logged -->
+            <div data-role="content">
+
+            </div>
+            <!--<div class="footer_zone"></div>-->
+            <div class="loader"></div> <!-- animazione al caricamento -->
+
+                <!-- popup pressione Login/Registrati -->
+                <!--
+                <div data-role="popup" id="pop_scelta_login" data-overlay-theme="d" data-theme="e" data-dismissible="true" data-corners="false" data-shadow="true" data-border="true">
+                    <div data-role="header" data-theme="e">
+                        <h4 class="header-title">Opzioni...</h4>
+                    </div>
+                    <div role="main" class="ui-content" style="background:#003399;">
+                        <form>
+                        <ul data-role="listview" data-inset="true" data-corners="false" style="min-width: 210px;">
+                            <li style="border-bottom:1px solid #eee"><a href="#" id="apri_login">Login</a></li>
+                            <li style="border-bottom:1px solid #eee"><a href="#" id="apri_registrazione">Registrati</a></li>
+                            <li style="border-bottom:1px solid #eee; margin-bottom: 5px;"><a href="#" id="apri_pwd_lose">Password dimenticata</a></li>
+                            <li><a href="#" id="apri_fb_login"><i class="fa fa-facebook" style="margin: 0; background: blue; color: white; border-radius: 25px; width: 20px; height: 20px; text-align: center; line-height: 22px;"></i> Accedi con Facebook</a></li>
+                        </ul>
+                        </form>
+                    </div>
+                </div>
+                -->
+        </div>
+        <!-- fine pagina logged -->
+
+
+
+
+
+        <!-- ALARMS -->
+        <div id="alarms" data-role="page" data-theme='e'>
+            <div class="sidebar_zone"></div>
+            <!--<div class="topbar_zone"></div>-->
+            <!-- header -->
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='e'>
+                <a class='toggle_sidebar' href="#" data-role="none"><i class="fa fa-reorder"></i></a>
+                <h1 class="header-title" style="max-width: unset;">ALLARMI</h1>
+            </div>
+
+            <!-- contenuto - alarms -->
+            <div data-role="content">
+                <p>Scegli le modalità di segnalazione allarmi</p>
+
+                <ul id="alarms_ul" data-role="listview">
+                    <li data-role="fieldcontain" id="alarms_row_temp">
+                        <fieldset data-role="controlgroup" data-corners="false" data-mini="true">
+                            <legend>ALLARMI DI TEMPERATURA</legend>
+                            <input type="checkbox" id="alarms_temp_vibra" checked="checked" disabled="disabled">
+                            <label for="alarms_temp_vibra" class="info">Vibazione</label>
+                            <input type="checkbox" id="alarms_temp_lamp">
+                            <label for="alarms_temp_lamp" class="info">Lampeggiamento</label>
+                            <input type="checkbox" id="alarms_temp_sound">
+                            <label for="alarms_temp_sound" class="info">Suono (in app)</label>
+                        </fieldset>
+                    </li>
+
+                    <li data-role="fieldcontain" id="alarms_row_prox">
+                        <fieldset data-role="controlgroup" data-corners="false" data-mini="true">
+                            <legend>ALLARMI DI PROSSIMITA'</legend>
+                            <input type="checkbox" id="alarms_prox_vibra" checked="checked" disabled="disabled">
+                            <label for="alarms_prox_vibra" class="info">Vibazione</label>
+                            <input type="checkbox" id="alarms_prox_lamp">
+                            <label for="alarms_prox_lamp" class="info">Lampeggiamento</label>
+                            <input type="checkbox" id="alarms_prox_sound">
+                            <label for="alarms_prox_sound" class="info">Suono (in app)</label>
+                        </fieldset>
+                    </li>
+                </ul>
+                <br /><br />
+                <button id="alarms_save" data-role="none" class="nightly-button nightly-button-a">Salva</button>
+
+            </div>
+            <!--<div class="footer_zone"></div>-->
+            <div class="loader"></div> <!-- animazione al caricamento -->
+        </div>
+        <!-- fine pagina alarms -->
+
+
+
+
+
+
+        <!-- CHANGE PWD -->
+        <div id="changePwd" data-role="page" data-theme='e'>
+            <!--<div class="sidebar_zone"></div>-->
+            <!--<div class="topbar_zone"></div>-->
+            <!-- header -->
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='e'>
+                <a class='toggle_sidebar_back' href="#" data-rel="back" data-role="none"><i class="fa fa-angle-double-left"></i></a>
+                <h1 class="header-title" style="max-width: unset;">CAMBIA PASSWORD</h1>
+            </div>
+
+            <!-- contenuto - changePwd -->
+            <div data-role="content">
+                <p style="text-align: left;"><strong>Aggiorna la tua password</strong></p>
+                <p style="text-align: left;">
+                    <small>
+                        <ul style="text-align: left; padding-left: 13px; color: #888888;">
+                            <li>Scegli una password diversa dalla precedente</li>
+                            <li>Lunghezza minima 8 caratteri</li>
+                            <li>Usa almeno una maiuscola e almeno una minuscola</li>
+                            <li>Inserisci almeno un numero e almeno un carattere speciale</li>
+                        </ul>
+                    </small>
+                </p>
+                <br />
+                <ul data-role="listview">
+                    <li data-role="fieldcontain" style="border: none;">
+                        <label>Nuova password:</label>
+                        <div class="pwd_div">
+                            <input id="changePwd_pwd1" class="password" data-corners="false" type="password" value="" data-clear-btn="false" placeholder="">
+                            <div class="pwd_show" data-id="changePwd_pwd1"><i class="fa fa-eye"></i></div>
+                        </div>
+                    </li>
+                    <li data-role="fieldcontain" style="border: none;">
+                        <label>Ripeti Password:</label>
+                        <div class="pwd_div">
+                            <input id="changePwd_pwd2" class="password" data-corners="false" type="password" value="" data-clear-btn="false" placeholder="">
+                            <div class="pwd_show" data-id="changePwd_pwd2"><i class="fa fa-eye"></i></div>
+                        </div>
+                    </li>
+                    <li data-role="fieldcontain" style="border: none;">
+                        <button id="changePwd_btn" class="ui-btn ui-btn-inline" style="font-weight: normal;">Aggiorna</button>
+                    </li>
+                </ul>
+
+            </div>
+            
+            <!--<div class="footer_zone"></div>-->
+            <div class="loader"></div> <!-- animazione al caricamento -->
+        </div>
+        <!-- fine pagina changePwd -->
+
+
+
+        <!-- AGGIORNA -->
+        <div id="aggiorna" data-role="page" data-theme='e'>
+            <!--<div class="topbar_zone"></div>-->
+            <!-- header -->
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='e'>
+                <h1 class="header-title">MAE HW</h1>
+            </div>
+
+            <!-- contenuto - aggiorna -->
+            <div data-role="content">
+
+                <h4>AGGIORNA L'APP</h4>
+                <p>Stai utilizzando una versione datata dell'app.<br />Aggiornala per continuare ad utilizzarne i servizi!</p>
+
+            </div>
+            <div class="loader"></div> <!-- animazione al caricamento -->
+        </div>
+        <!-- fine pagina aggiorna -->
+
+
+
+
+
+
+
+        <script>
+        // Imposto i monthpicker
+        var d = new Date();
+        var a = d.getFullYear();
+        var m = (d.getMonth() + 1);
+
+        options = {
+            pattern: 'mm-yyyy',
+            selectedYear: a,
+            startYear: (a),
+            finalYear: (a + 4),
+            monthNames: ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dec']
+        };
+
+        $('#data_cerca').monthpicker(options);
+        </script>
+
+
+
+
+
+
+
+
+        <!-- importo le funzioni operative javascript -->
+        <script src="js/utility/utility.js"></script>
+        <!--<script src="js/utility/common_js_app.js"></script>-->
+        <script src="js/login/login.js"></script>
+        <script src="js/login/change_pwd.js"></script>
+
+        <script src="js/sync/sync.js"></script>
+        
+        <!-- Disegno i menù nelle varie pagine -->
+        <!--<script src="html/topbar.js"></script>-->
+        <script src="html/sidebar.js"></script>
+        <!--<script src="html/footer.js"></script>-->
+
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

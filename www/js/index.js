@@ -151,7 +151,7 @@ function onBackKeyDown(e) {
     if ($(".ui-page-active .ui-popup-active").length > 0) { //c'è un popup aperto, lo chiudo!
         $('[data-role="popup"]').popup().popup("close");
 
-    } else if (page == 'aggiorna' || page == 'unlogged' || page == 'block') {
+    } else if (page == 'aggiorna' || page == 'unlogged' || page == 'block' || page == 'tenant') {
         e.preventDefault();
         return false;
 

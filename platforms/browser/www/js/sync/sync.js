@@ -219,6 +219,7 @@ function update_bracelet_post_sync(){
 
 
 
+
 // Aggiornamento del Bearer (durata 30 giorni)
 function updateBearer(){
     var json_data = { Action: 6, Tenant: parseInt(ls("maesafe_tenantId")), Message: 30 };

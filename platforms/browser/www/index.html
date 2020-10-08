@@ -122,6 +122,39 @@
         <!-- fine pagina unlogged -->
 
 
+
+        <!-- TENANT -->
+        <div id="tenant" data-role="page" data-theme='e'>
+            <div class="sidebar_zone"></div>
+            <!--<div class="topbar_zone"></div>-->
+            <!-- header -->
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='e'>
+                <h1 class="header-title">MAE PODOS</h1>
+            </div>
+
+            <!-- contenuto - tenant -->
+            <div data-role="content">
+                <p>Scegli l'azienda</p>
+                <ul data-role="listview">
+                    <li data-role="fieldcontain" style="border: none;">
+                        <label>Azienda:</label>
+                        <select id="tenant_choice">
+                            <option value="">- -</option>
+                        </select>
+                    </li>
+                    <li data-role="fieldcontain" style="border: none;">
+                        <button id="tenant_go" class="ui-btn ui-btn-inline" style="font-weight: normal;">CONFERMA</button>
+                    </li>
+                </ul>
+                <br />
+                
+            </div>
+            <!--<div class="footer_zone"></div>-->
+            <div class="loader"></div> <!-- animazione al caricamento -->
+        </div>
+        <!-- fine pagina tenant -->
+
+
         <!-- LOGGED -->
         <div id="logged" data-role="page" data-theme='e'>
             <div class="sidebar_zone"></div>
